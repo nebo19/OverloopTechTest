@@ -14,7 +14,7 @@ function ArticleCreate() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [regions, setRegions] = useState([]);
-  const [author, setAuthor] = useState();
+  const [author, setAuthor] = useState({});
   const [error, setError] = useState('');
 
   const handleSave = async () => {
@@ -22,7 +22,7 @@ function ArticleCreate() {
       title,
       content,
       regions,
-      author: author?.authorId === 0 || author === undefined ? {} : author,
+      author: author?.authorId === 0 ? {} : author,
     };
     try {
       await createArticle(payload);

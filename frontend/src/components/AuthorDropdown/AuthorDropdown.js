@@ -21,7 +21,6 @@ const AuthorDropdown = ({ value, onChange }) => {
   return (
     <div>
       <DropdownList
-        listProps={{ 'data-testid': 'selectOption' }}
         value={value}
         data={authors}
         textField={(author) =>
@@ -32,7 +31,6 @@ const AuthorDropdown = ({ value, onChange }) => {
         valueField="id"
         onChange={onChange}
         allowCreate={false}
-        placeholder="Select an author"
         data-testid="authorDropdown"
       />
     </div>
