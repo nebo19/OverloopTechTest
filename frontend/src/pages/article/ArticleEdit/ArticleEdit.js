@@ -35,7 +35,7 @@ function ArticleEdit(props) {
       title,
       content,
       regions,
-      author: author.authorId === 0 ? {} : author,
+      author: author?.authorId === 0 ? {} : author,
     };
     try {
       await editArticle(articleId, payload);
